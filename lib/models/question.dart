@@ -14,7 +14,7 @@ class Question {
         required this.choix,
         required this.bonneReponse,
         required this.categorie,
-        this.tempsLimite = 15,
+        this.tempsLimite = 30,
     });
 
     /// Vérifie si une réponse est correcte

@@ -25,10 +25,12 @@ class QuizScreen extends StatefulWidget {
 class _QuizScreenState extends State<QuizScreen> {
 
     int currentIndex = 0;
-    int timeLeft = 15;
+    int timeLeft = 30;
     Timer? timer;
     int score = 0;
     int bonnesReponses = 0;
+    String? selectedAnswer;
+    bool showFeedback = false;
 
     @override
     void initState() {
@@ -67,7 +69,7 @@ class _QuizScreenState extends State<QuizScreen> {
         if (currentIndex < widget.questions.length - 1) {
             setState(() {
                 currentIndex++;
-                timeLeft = 15;
+                timeLeft = 30;
             });
             startTimer();
         } else {
@@ -117,6 +119,7 @@ class _QuizScreenState extends State<QuizScreen> {
 
     @override
     Widget build(BuildContext context) {
+
         final question = widget.questions[currentIndex];
 
         return Scaffold(
@@ -127,7 +130,7 @@ class _QuizScreenState extends State<QuizScreen> {
             body: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                         // Score + Timer
                         Row(

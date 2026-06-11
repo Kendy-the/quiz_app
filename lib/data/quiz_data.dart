@@ -1,7 +1,7 @@
 import '../models/categorie.dart';
 import '../models/question.dart';
 
-class QuizData {
+abstract class QuizData {
 
     static List<Categorie> allCategories() {
         return categories;
@@ -68,9 +68,13 @@ class QuizData {
     // =========================
     static List<Question> scienceQuestions = [
         Question(id: "s1", texte: "Quelle planète est appelée planète rouge ?", choix: ["Mars", "Vénus", "Jupiter", "Terre"], bonneReponse: "Mars", categorie: categories[0]),
+        
         Question(id: "s2", texte: "Quelle est la formule de l'eau ?", choix: ["CO2", "H2O", "O2", "NaCl"], bonneReponse: "H2O", categorie: categories[0]),
+        
         Question(id: "s3", texte: "Quel organe pompe le sang ?", choix: ["Cœur", "Foie", "Poumon", "Rein"], bonneReponse: "Cœur", categorie: categories[0]),
+        
         Question(id: "s4", texte: "Quel gaz respirons-nous ?", choix: ["Oxygène", "Azote", "CO2", "Hélium"], bonneReponse: "Oxygène", categorie: categories[0]),
+        
         Question(id: "s5", texte: "Quelle est l’unité de force ?", choix: ["Watt", "Newton", "Volt", "Joule"], bonneReponse: "Newton", categorie: categories[0]),
     ];
 

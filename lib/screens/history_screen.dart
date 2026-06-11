@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/services/history_service.dart';
+import 'package:quiz_app/services/joueur_service.dart';
 import '../models/partie.dart';
 
 class HistoryScreen extends StatelessWidget {
@@ -39,6 +40,7 @@ class HistoryScreen extends StatelessWidget {
                             subtitle: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
+                                Text("Joueur : ${JoueurService.nomJoueur}"),
                                 Text(
                                     "Date: ${partie.date.day}/${partie.date.month}/${partie.date.year}",
                                 ),

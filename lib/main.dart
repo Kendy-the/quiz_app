@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'package:quiz_app/screens/welcome_screen.dart';
 
 void main() {
   runApp(const QuizApp());
@@ -19,7 +19,7 @@ class QuizApp extends StatelessWidget {
                 useMaterial3: true,
             ),
 
-            home: const HomeScreen(),
+            home: const WelcomeScreen(),
         );
     }
 }

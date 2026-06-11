@@ -1,17 +1,84 @@
-# quiz_app
+# 🎯 Quiz Mobile App - Flutter
 
-A new Flutter project.
+Application mobile de quiz interactif développée avec Flutter permettant aux utilisateurs de tester leurs connaissances dans plusieurs catégories (Sciences, Histoire, Sport, Technologie, etc.).
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📱 Fonctionnalités principales
 
-A few resources to get you started if this is your first Flutter project:
+- 👤 Saisie du nom du joueur au lancement
+- 🗂️ Choix de catégories de quiz
+- ❓ Quiz interactif avec minuterie par question
+- ⏱️ Système de score en temps réel
+- 🏆 Affichage du score final
+- 📜 Historique des parties jouées
+- 🔄 Navigation fluide entre écrans
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🏗️ Architecture du projet
+
+Le projet suit une architecture simple basée sur :
+
+```text
+lib/
+│
+├── models/ # Classes métier (Question, Categorie, Partie)
+├── screens/ # Interfaces utilisateur (UI)
+├── services/ # Logique métier (score, historique, stockage)
+├── data/ # Données locales du quiz (questions)
+└── main.dart # Point d'entrée de l'application
+```
+---
+
+## 🧠 Logique métier
+
+L’application repose sur les entités suivantes :
+
+- **Joueur** : utilisateur de l’application
+- **Catégorie** : thème du quiz (Sciences, Sport, etc.)
+- **Question** : question avec plusieurs choix
+- **Réponse** : choix possible avec validation
+- **Partie** : session de jeu avec score et durée
+- **QuizData** : base de données locale des questions
+
+👉 Une partie se déroule comme suit :
+
+```text
+    Joueur Entre son nom 
+        → Choisit une catégorie 
+            → Lance une partie 
+                → Répond aux questions 
+                    → Score calculé 
+                        → Résultat affiché
+```
+---
+
+## 🚀 Installation et lancement
+
+### 1. Cloner le projet
+
+```bash
+git clone https://github.com/kendy-the/quiz_app.git
+cd quiz_app
+
+```
+### 2. Installer les dependances
+```bash
+flutter pub get
+```
+
+### 3. lancer l'app
+```bash
+flutter run
+```
+
+### 4. generer un apk
+```bash
+flutter build apk --release
+```
+
+le fichier se trouvera dans :
+```text
+build/app/outputs/flutter-apk/app-release.apk
+```

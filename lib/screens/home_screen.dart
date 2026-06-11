@@ -21,26 +21,26 @@ Widget build(BuildContext context) {
 
                 children: [
                     const Text(
-                    "Quiz",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                    ),
+                        "Quiz",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                        ),
                     ),
 
                     const SizedBox(height: 40),
 
                     ElevatedButton(
-                    onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                            builder: (context) => const CategoryScreen(),
-                            ),
-                        );
-                    },
-                    child: const Text("Commencer"),
+                        onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                builder: (context) => const CategoryScreen(),
+                                ),
+                            );
+                        },
+                        child: const Text("Commencer"),
                     ),
 
                     const SizedBox(height: 15),
@@ -60,15 +60,15 @@ Widget build(BuildContext context) {
                     const SizedBox(height: 15),
 
                     ElevatedButton(
-                    onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HistoryScreen(),
-                            ),
-                        );
-                    },
-                    child: const Text("Historique"),
+                        onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const HistoryScreen(),
+                                ),
+                            );
+                        },
+                        child: const Text("Historique"),
                     ),
                 ],
             ),
